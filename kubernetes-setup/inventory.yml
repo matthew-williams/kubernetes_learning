@@ -1,0 +1,25 @@
+---
+# master.playbook
+master_node:
+  hosts:
+    master:
+      ansible_host: 192.168.50.10
+      ansible_ssh_private_key_file: /home/adminlocal/kubernetes_learning/.vagrant/machines/k8s-master/libvirt/private_key
+      node_ip: 192.168.50.10
+  vars:
+    ansible_connection: ssh
+    ansible_python_interpreter: /usr/bin/python3
+# node.playbook
+slave_nodes:
+  hosts:
+    node1:
+      ansible_host: 192.168.50.11
+      ansible_ssh_private_key_file: /home/adminlocal/kubernetes_learning/.vagrant/machines/node-1/libvirt/private_key
+      node_ip: 192.168.50.11
+    node2:
+      ansible_host: 192.168.50.12
+      ansible_ssh_private_key_file: /home/adminlocal/kubernetes_learning/.vagrant/machines/node-2/libvirt/private_key
+      node_ip: 192.168.50.12
+  vars:
+    ansible_connection: ssh
+    ansible_python_interpreter: /usr/bin/python3

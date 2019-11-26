@@ -1,0 +1,14 @@
+resources:
+  requests:
+    memory: 2048Mi
+minecraftServer:
+  eula: "true"
+  difficulty: normal
+  ops: sati_v
+  memory: 2048M
+  rcon:
+    enabled: true
+    password: "123!@#"
+persistence:
+  dataDir:
+    enabled: false
